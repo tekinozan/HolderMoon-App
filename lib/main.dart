@@ -59,7 +59,7 @@ class MyStatelessWidget extends StatelessWidget {
                   textStyle:TextStyle(
                     color: Colors.white,
                     fontSize: 18,
-                    fontWeight: FontWeight.w400),
+                    fontWeight: FontWeight.bold),
               )),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -80,7 +80,7 @@ class MyStatelessWidget extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.all(2),
-                          fixedSize: Size(150, 24),
+                          fixedSize: Size(170, 24),
                           textStyle: TextStyle(
                               fontSize: 17, fontWeight: FontWeight.bold),
                           primary: Colors.amber,
@@ -132,7 +132,7 @@ class MyStatelessWidget extends StatelessWidget {
           ),
           SpeedDialChild(
             child: Icon(Icons.web_asset),
-            label: "Go to our website",
+            label: "Visit our website!",
             onTap: () async {
               const url = 'https://holdermoon.com/';
 
@@ -151,6 +151,22 @@ class MyStatelessWidget extends StatelessWidget {
             foregroundColor: Colors.red,
             onTap: () async {
               const url = 'https://www.instagram.com/holdermoon_/';
+
+              if (await canLaunch(url)) {
+                await launch(
+                  url,
+                  forceSafariVC: false, //ios
+                );
+              } else {
+                throw 'Could not launch $url';
+              }
+            },
+          ),
+          SpeedDialChild(
+            child: Icon(FontAwesomeIcons.telegram),
+            label: "Join us on Telegram!",
+            onTap: () async {
+              const url = 'https://t.me/holdermoon_token';
 
               if (await canLaunch(url)) {
                 await launch(
@@ -250,15 +266,15 @@ class MyStatelessWidget extends StatelessWidget {
                       MyArticles(
                         "assets/coinmark.png",
                         "We are in the CoinMarketCap",
-                        "Open CoinMarket",
+                        "Open CoinMarketCap",
                         'https://coinmarketcap.com/currencies/holdermoon/',
                         64,
                         64,
                       ),
                       MyArticles(
-                        "assets/coingekko.png",
-                        "We are also in the Coingekko",
-                        "Open Coingekko",
+                        "assets/coingecko.png",
+                        "We are also in the Coingecko",
+                        "Open Coingecko",
                         'https://www.coingecko.com/en/coins/holdermoon',
                         64,
                         64,
