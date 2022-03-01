@@ -55,11 +55,12 @@ class MyStatelessWidget extends StatelessWidget {
               ),
               Text(
                 a,
-                style: TextStyle(
+                style: GoogleFonts.fredokaOne(
+                  textStyle:TextStyle(
                     color: Colors.white,
                     fontSize: 18,
-                    fontWeight: FontWeight.bold),
-              ),
+                    fontWeight: FontWeight.w400),
+              )),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
@@ -238,6 +239,30 @@ class MyStatelessWidget extends StatelessWidget {
                           'https://dex.guru/token/0x71e4e5168ce91ef956dd5bb80db391e400aa325f-bsc',
                           80,
                           200),
+                      MyArticles(
+                        "assets/binance.png",
+                        "Binance",
+                        "See the Price",
+                        ' https://www.binance.com/en/price/holdermoon',
+                        64,
+                        64,
+                      ),
+                      MyArticles(
+                        "assets/coinmark.png",
+                        "We are in the CoinMarketCap",
+                        "Open CoinMarket",
+                        'https://coinmarketcap.com/currencies/holdermoon/',
+                        64,
+                        64,
+                      ),
+                      MyArticles(
+                        "assets/coingekko.png",
+                        "We are also in the Coingekko",
+                        "Open Coingekko",
+                        'https://www.coingecko.com/en/coins/holdermoon',
+                        64,
+                        64,
+                      ),
                     ],
                   ),
                 ),
