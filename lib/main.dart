@@ -53,14 +53,13 @@ class MyStatelessWidget extends StatelessWidget {
                 height: x,
                 width: y,
               ),
-              Text(
-                a,
-                style: GoogleFonts.fredokaOne(
-                  textStyle:TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold),
-              )),
+              Text(a,
+                  style: GoogleFonts.asap(
+                    textStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 19,
+                        fontWeight: FontWeight.w700),
+                  )),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
