@@ -30,6 +30,7 @@
 .pub-cache/
 .pub/
 /build/
+*.js linguist-language=Dart
 
 # Web related
 lib/generated_plugin_registrant.dart
