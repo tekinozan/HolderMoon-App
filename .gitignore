@@ -47,8 +47,4 @@ app.*.map.json
 /android/app/release
 
 
-*.js linguist-detectable=true
-*.java linguist-detectable=false
-*.html linguist-detectable=false
-*.xml linguist-detectable=false
 
